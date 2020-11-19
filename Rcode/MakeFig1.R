@@ -1,4 +1,4 @@
-#! /usr/bin/Rscript
+#! /usr/local/bin/Rscript
 
 Full_data<-read.csv("clean_data/Full_data.csv")
 

@@ -19,4 +19,4 @@ COPY ./ /project/
 RUN chmod +x /project/Rcode/*.R
 
 # make container entry point bash
-CMD make -C project report.html
+CMD make -C project

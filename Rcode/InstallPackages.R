@@ -1,4 +1,4 @@
-#! /usr/bin/Rscript
+#! /usr/local/bin/Rscript
 
 installed_pkgs <- row.names(installed.packages())
 
