@@ -1,8 +1,4 @@
 
-#rule to build the docker image
-docker:
-	docker build -t project .
-
 #rule for final report. In this report, the linear regression is run and the table is made
 report.html: clean_data/Full_data.csv Rcode/Report.Rmd figs/fig1.png Rcode/LoadPackages.R
 	Rscript -e "rmarkdown::render('Rcode/Report.Rmd', output_file = '../Reports/report.html')"
@@ -15,9 +11,18 @@ clean_data/Full_data.csv: Rcode/CleanData.R raw_data/Demographics.csv raw_data/T
 figs/fig1.png: Rcode/MakeFig1.R clean_data/Full_data.csv
 	chmod +x Rcode/MakeFig1.R && Rcode/MakeFig1.R
 
+#rule to install any package dependencies
+install:
+	chmod +x Rcode/InstallPackages.R && Rcode/InstallPackages.R
+
+#rule to build the docker image
+docker:
+	docker build -t project .
 
 #rule for help file
 help:
-	@echo "report.html			: Generate final analysis report. Run regression and get Table 1"
+	@echo "report.html				: Generate final analysis report. Run regression and get Table 1"
 	@echo "clean_data/Full_data.csv	: Merge datasets and only keep necessary columns."
 	@echo "figs/fig1.png			: Make Scatter Plot of Engagement and TNF Alpha"
+	@echo "InstallPackages			: install package dependencies"
+	@echo "docker					: build project using docker"
