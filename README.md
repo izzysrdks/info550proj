@@ -8,7 +8,7 @@ For this project, I am combining three datasets in order to run a regression to 
 This repo contains several files that allow you to either run the program via docker (recommended) or just using the makefile. Follow the below instructions for whichever method you are looking for. Additionally, the repo contains five folders, a dockerfile and a makefile. For more information on the makefile you can type `make help` from the command line while in the project folder to see information about each section of the file. THe raw_data folder contains the raw_data for the analysis, clean_data will be the folder where the program drops the data used in the analysis, figs will contain any figures created while running the program, Rcode contains any of the statistical programs needed, and lastly Reports is where the final report will be dropped.
    
 ## Set Up  
-First fork and clone this repository onto your local device and note the path to the project folder.  
+First fork and clone this repository onto your local device and note the path to the project folder. You will then have to create some empty folders for the output. From the project folder type `mkdir Reports` , `mkdir clean_data` , and `mkdir figs` .   
 
 ## Execute the Code with Docker (Recommended) 
 To run the program, first pull the docker image using the following code in the command line:  
