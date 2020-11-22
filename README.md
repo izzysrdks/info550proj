@@ -20,4 +20,6 @@ Replace "/path/to/project" with the specific path to the project folder on your 
 ## Execute the Code without Docker  
 After forking the repo, type `make` in the command line and the program will run. A report titled `report.html` will be dropped in the reports folder. Please note that this method might lead to issues with installing the R packages or running R programs on a different type of system than they were originally built on.  
 
-
+### Trouble Shooting  
+1. When exexuting the code, make sure all files are set to use Unix line endings. In Sublime text editor, this can be done by opening the file, going to view, and then selecting line endings and Unix.  
+2. When executing the code without docker, make sure the Rscripts have the proper path at the top. To make sure you have the right path, type `which Rscript` in your command line and make sure this matches with what is in the Rscripts. The path is currently set to work with the docker image.
