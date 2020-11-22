@@ -12,9 +12,9 @@ First fork and clone this repository onto your local device and note the path to
 
 ## Execute the Code with Docker (Recommended) 
 To run the program, first pull the docker image using the following code in the command line:  
-`docker pull izzysrdks/info550_project:proj`  
+`docker pull izzysrdks/info550_project:final`  
 After doing so, you can run it by typing:  
-`docker run -v /path/to/project:/project izzysrdks/info550_project:proj`  
+`docker run -v /path/to/project:/project izzysrdks/info550_project:final`  
 Replace "/path/to/project" with the specific path to the project folder on your computer. This will run the program and create a final report titled `report.html` in the reports folder.  
 
 ## Execute the Code without Docker  
